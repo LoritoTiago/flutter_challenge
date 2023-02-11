@@ -9,6 +9,7 @@ import 'package:flutter_challenge/core/injections/get_it.dart';
 import 'package:flutter_challenge/features/audio_players/presentation/bloc/audio_play_bloc.dart';
 import 'package:flutter_challenge/features/audio_players/presentation/bloc/audio_play_event.dart';
 import 'package:flutter_challenge/features/audio_players/presentation/bloc/audio_play_state.dart';
+import 'package:flutter_challenge/features/audio_players/presentation/widgets/audio_widget.dart';
 import 'package:flutter_challenge/features/audio_players/presentation/widgets/image_background.dart';
 import 'package:flutter_challenge/features/audio_players/presentation/widgets/page_view_widget.dart';
 
@@ -44,11 +45,12 @@ class AudioPlay extends StatelessWidget {
                       Expanded(
                         child: PageViewWidget(data: data),
                       ),
-                      const SizedBox(height: 10),
+                      const SizedBox(height: 20),
                       Container(
                         width: size.width,
-                        height: 100.0,
-                        color: Colors.red,
+                        height: 200.0,
+                        padding: const EdgeInsets.symmetric(horizontal: 50.0),
+                        child: AudioWidget(),
                       )
                     ],
                   ),

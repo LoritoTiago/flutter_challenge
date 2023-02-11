@@ -6,7 +6,8 @@ class TextBase extends StatelessWidget {
   final String text;
   final Color? cor;
   final FontWeight? font;
-  const TextBase({Key? key, this.cor, this.font, required this.text})
+  final double? size;
+  const TextBase({Key? key, this.size, this.cor, this.font, required this.text})
       : super(key: key);
 
   @override
@@ -14,7 +15,9 @@ class TextBase extends StatelessWidget {
     return Text(
       text,
       style: TextStyle(
-          color: cor ?? Colors.black, fontWeight: font ?? FontWeight.normal),
+          fontSize: size ?? 20.0,
+          color: cor ?? Colors.black,
+          fontWeight: font ?? FontWeight.normal),
     );
   }
 }

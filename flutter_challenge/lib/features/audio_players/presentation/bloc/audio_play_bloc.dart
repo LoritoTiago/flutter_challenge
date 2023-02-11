@@ -8,7 +8,6 @@ class AudioPlayBloc extends Bloc<AudioPlayEvent, AudioPlayState> {
   int _index = 0;
   AudioPlayBloc() : super(const AudioPlayInicialState(index: 0)) {
     on<AudioPlayChangingEvent>((event, emit) {
-      log("message ${event.currentPosition}");
       _index = event.currentPosition;
       emit(
         AudioPlayChangingAudioState(index: event.currentPosition),
