@@ -14,7 +14,7 @@ class ImageBackground extends StatelessWidget {
         key: ValueKey(imageUrl),
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: Image.asset("assets/img/$imageUrl").image,
+            image: Image.asset("assets/$imageUrl").image,
             fit: BoxFit.cover,
           ),
         ),

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../../core/navidator/navigator_cupertino.dart';
-import '../../../audio_players/page/playier_screen.dart';
+import '../../../sond_players/page/player_screen.dart';
 import '../../data/model/home_item_model.dart';
 import '../widgets/item.dart';
 
@@ -32,7 +32,7 @@ class HomePage extends StatelessWidget {
     data = [
       Item(
         item: HomeItemModel(
-          title: "Audio Play",
+          title: "Sond Play",
           icon: const Icon(Icons.audiotrack_outlined),
           function: () {
             NavigatorCupertino.navigatorNormal(

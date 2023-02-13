@@ -1,5 +1,5 @@
 class FormatData {
-  static String timer(Duration duration) {
+  static String toTimer(Duration duration) {
     String twoDigits(int n) => n.toString().padLeft(2, "0");
     final hours = twoDigits(duration.inHours);
     final minut = twoDigits(duration.inMinutes.remainder(60));
