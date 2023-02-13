@@ -35,7 +35,7 @@ class PlayierScreen extends StatelessWidget {
                   imageUrl: getIt<SondPlayBloc>().currentItem!.imageUrl!,
                 ),
                 FractionallySizedBox(
-                  heightFactor: 0.55,
+                  heightFactor: .70,
                   child: Column(
                     children: [
                       const Expanded(

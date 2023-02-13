@@ -2,7 +2,7 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_challenge/features/sond_players/bloc/sond_play_state.dart';
+import 'package:flutter_challenge/features/sond_player/bloc/sond_play_state.dart';
 
 import '../../../core/injections/get_it.dart';
 import '../bloc/sond_play_bloc.dart';

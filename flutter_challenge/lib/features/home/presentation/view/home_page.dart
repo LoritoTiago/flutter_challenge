@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../../core/navidator/navigator_cupertino.dart';
-import '../../../sond_players/page/player_screen.dart';
+import '../../../sond_player/page/player_screen.dart';
 import '../../data/model/home_item_model.dart';
 import '../widgets/item.dart';
 

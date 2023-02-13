@@ -3,7 +3,7 @@ import 'dart:developer';
 
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_challenge/features/sond_players/model/audio_model.dart';
+import 'package:flutter_challenge/features/sond_player/model/audio_model.dart';
 
 import '../../../core/injections/get_it.dart';
 import '../../../core/services/bloc_services.dart';
