@@ -1,30 +1,25 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter_challenge/core/injections/get_it.dart';
-import 'package:flutter_challenge/features/audio_players/presentation/bloc/audio_play_bloc.dart';
-import 'package:flutter_challenge/features/audio_players/presentation/bloc/audio_play_event.dart';
+
+import '../../../core/injections/get_it.dart';
+import '../bloc/audio_play_bloc.dart';
+import '../bloc/audio_play_event.dart';
 
 class PageViewWidget extends StatelessWidget {
-  final List<String> data;
-  const PageViewWidget({Key? key, required this.data}) : super(key: key);
+  const PageViewWidget({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    final currentindex = getIt<AudioPlayBloc>().getIndex;
-
+    final bloc = getIt<AudioPlayBloc>();
     return PageView.builder(
-      itemCount: data.length,
+      itemCount: bloc.audios.length,
       controller: PageController(viewportFraction: .9),
       onPageChanged: (int v) {
-        getIt<AudioPlayBloc>().add(
+        bloc.add(
           AudioPlayChangingEvent(currentPosition: v),
         );
       },
       itemBuilder: (context, index) {
-        final isCurrentItem = currentindex == index;
-
-        final tween = isCurrentItem ? 1.0 : 0.8;
+        final tween = bloc.getTween(index);
         return TweenAnimationBuilder<double>(
           duration: const Duration(milliseconds: 270),
           tween: Tween(begin: tween, end: tween),
@@ -37,11 +32,13 @@ class PageViewWidget extends StatelessWidget {
           child: AnimatedSwitcher(
             duration: const Duration(milliseconds: 500),
             child: Container(
-              key: UniqueKey(),
+              key: ValueKey(bloc.currentAudio!.title),
               margin: const EdgeInsets.symmetric(horizontal: 10.0),
               decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: Image.network(data[index]).image,
+                  image:
+                      Image.asset("assets/img/${bloc.currentAudio!.imageUrl}")
+                          .image,
                   fit: BoxFit.cover,
                 ),
                 borderRadius: BorderRadius.circular(32),

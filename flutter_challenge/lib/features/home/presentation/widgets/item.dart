@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter_challenge/core/presentation/text_base.dart';
-import 'package:flutter_challenge/features/home/data/model/home_item_model.dart';
+
+import '../../../../core/presentation/text_base.dart';
+import '../../data/model/home_item_model.dart';
 
 class Item extends StatelessWidget {
   final HomeItemModel item;

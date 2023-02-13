@@ -3,17 +3,17 @@ import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
 class TextBase extends StatelessWidget {
-  final String text;
+  final String? text;
   final Color? cor;
   final FontWeight? font;
   final double? size;
-  const TextBase({Key? key, this.size, this.cor, this.font, required this.text})
+  TextBase({Key? key, this.size, this.cor, this.font, this.text})
       : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Text(
-      text,
+      text ?? "",
       style: TextStyle(
           fontSize: size ?? 20.0,
           color: cor ?? Colors.black,

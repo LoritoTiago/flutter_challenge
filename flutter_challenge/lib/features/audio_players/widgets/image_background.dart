@@ -1,8 +1,6 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 class ImageBackground extends StatelessWidget {
   final String imageUrl;
@@ -13,10 +11,10 @@ class ImageBackground extends StatelessWidget {
     return AnimatedSwitcher(
       duration: const Duration(seconds: 1),
       child: Container(
-        key: UniqueKey(),
+        key: ValueKey(imageUrl),
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: Image.network(imageUrl).image,
+            image: Image.asset("assets/img/$imageUrl").image,
             fit: BoxFit.cover,
           ),
         ),
