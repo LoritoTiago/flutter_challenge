@@ -6,7 +6,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_challenge/features/sond_player/model/audio_model.dart';
 
 import '../../../core/injections/get_it.dart';
-import '../../../core/services/bloc_services.dart';
+import '../../../core/services/services.dart';
 
 import 'sond_play_event.dart';
 import 'sond_play_state.dart';
