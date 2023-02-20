@@ -31,7 +31,12 @@ Feel free to make a merge request 😉
 
 ## Screenshots
 
-https://user-images.githubusercontent.com/58330997/220212043-ad4c4ea9-a566-440b-b2eb-787ee662cfbf.MP4
+| Project | Description |
+| --- | --- |
+| https://user-images.githubusercontent.com/58330997/220212043-ad4c4ea9-a566-440b-b2eb-787ee662cfbf.MP4
+ | List all *new or modified* files |
+| `git diff` | Show file differences that **haven't been** staged |
+
 
 
 
