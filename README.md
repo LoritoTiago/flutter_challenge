@@ -35,7 +35,7 @@ Feel free to make a merge request 😉
 
 |   |  |
 | ------------- | ------------- |
-| https://user-images.githubusercontent.com/58330997/220212043-ad4c4ea9-a566-440b-b2eb-787ee662cfbf.MP4  | Content Cell  |
+| <video src="https://user-images.githubusercontent.com/58330997/220212043-ad4c4ea9-a566-440b-b2eb-787ee662cfbf.MP4 "> | Content Cell  |
 | Content Cell  | Content Cell  |
 
 
