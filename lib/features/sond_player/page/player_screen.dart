@@ -10,7 +10,7 @@ import '../widgets/image_background.dart';
 import '../widgets/page_view_widget.dart';
 
 class PlayierScreen extends StatelessWidget {
-  PlayierScreen({Key? key}) : super(key: key);
+  const PlayierScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

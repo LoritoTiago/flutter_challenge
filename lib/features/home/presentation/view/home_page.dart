@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_challenge/features/list_books/pages/list_books.dart';
 
 import '../../../../core/navidator/navigator_cupertino.dart';
 import '../../../sond_player/page/player_screen.dart';
@@ -38,6 +39,18 @@ class HomePage extends StatelessWidget {
             NavigatorCupertino.navigatorNormal(
               context,
               PlayierScreen(),
+            );
+          },
+        ),
+      ),
+      Item(
+        item: HomeItemModel(
+          title: "List Books",
+          icon: const Icon(Icons.menu_book_sharp),
+          function: () {
+            NavigatorCupertino.navigatorNormal(
+              context,
+              const ListBooks(),
             );
           },
         ),
