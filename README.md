@@ -30,6 +30,7 @@ Feel free to make a merge request 😉
 
 
 ## Screenshots
+![Simulator Screen Shot - iPhone 14 Pro - 2023-02-21 at 00 22 56](https://user-images.githubusercontent.com/58330997/220212177-e09f748f-822a-4770-b615-5d63b7aa8eb9.png)
 https://user-images.githubusercontent.com/58330997/220212043-ad4c4ea9-a566-440b-b2eb-787ee662cfbf.MP4
 
 
