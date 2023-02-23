@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_challenge/features/food_delivery/pages/food_delivery.dart';
 import 'package:flutter_challenge/features/list_books/pages/list_books.dart';
 
 import '../../../../core/navidator/navigator_cupertino.dart';
@@ -51,6 +52,18 @@ class HomePage extends StatelessWidget {
             NavigatorCupertino.navigatorNormal(
               context,
               const ListBooks(),
+            );
+          },
+        ),
+      ),
+      Item(
+        item: HomeItemModel(
+          title: "Food Delivery",
+          icon: const Icon(Icons.food_bank_outlined),
+          function: () {
+            NavigatorCupertino.navigatorNormal(
+              context,
+              const FoodDelivery(),
             );
           },
         ),

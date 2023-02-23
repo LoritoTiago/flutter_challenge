@@ -1,6 +1,7 @@
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter_challenge/features/list_books/model/book_model.dart';
 import 'package:flutter_challenge/features/list_books/model/category_model.dart';
+import 'package:flutter_challenge/features/sond_player/model/audio_model.dart';
 
 class BlocServices {
   var play = AudioPlayer();
@@ -144,5 +145,44 @@ class BlocServices {
     CategoryModel(title: "Fantasy", id: 4),
     CategoryModel(title: "Historical fiction", id: 5),
     CategoryModel(title: "Horror", id: 6),
+  ];
+
+  List<AudioModel> audios = [
+    AudioModel(
+      author: "Pheelz",
+      title: "Stand by you",
+      audioUrl: "stand.mp3",
+      imageUrl: "stand.png",
+    ),
+    AudioModel(
+      author: "Asake",
+      title: "Yoga",
+      audioUrl: "yoga.mp3",
+      imageUrl: "yoga.jpeg",
+    ),
+    AudioModel(
+      author: "Asake",
+      title: "Yoga",
+      audioUrl: "yoga.mp3",
+      imageUrl: "yoga.jpeg",
+    ),
+    AudioModel(
+      author: "Asake",
+      title: "Yoga",
+      audioUrl: "yoga.mp3",
+      imageUrl: "yoga.jpeg",
+    ),
+    AudioModel(
+      author: "Asake",
+      title: "Yoga",
+      audioUrl: "yoga.mp3",
+      imageUrl: "yoga.jpeg",
+    ),
+    AudioModel(
+      author: "Asake",
+      title: "Yoga",
+      audioUrl: "yoga.mp3",
+      imageUrl: "yoga.jpeg",
+    ),
   ];
 }
