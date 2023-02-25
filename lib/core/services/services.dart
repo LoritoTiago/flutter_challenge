@@ -1,4 +1,8 @@
 import 'package:audioplayers/audioplayers.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_challenge/features/food_delivery/model/drink_model.dart';
+import 'package:flutter_challenge/features/food_delivery/model/food_model.dart';
+import 'package:flutter_challenge/features/food_delivery/model/sauces_model.dart';
 import 'package:flutter_challenge/features/list_books/model/book_model.dart';
 import 'package:flutter_challenge/features/list_books/model/category_model.dart';
 import 'package:flutter_challenge/features/sond_player/model/audio_model.dart';
@@ -147,42 +151,84 @@ class BlocServices {
     CategoryModel(title: "Horror", id: 6),
   ];
 
-  List<AudioModel> audios = [
-    AudioModel(
-      author: "Pheelz",
-      title: "Stand by you",
-      audioUrl: "stand.mp3",
-      imageUrl: "stand.png",
+//* Food delivery datas
+  List<FoodModel> foods = [
+    FoodModel(
+      color: const Color(0xffFF6161),
+      title: "Fried fish",
+      subTitle: "Salad",
+      price: "10",
+      isFavorite: false,
+      user: UserModel(imageUrl: "paula.png", name: "Paula João"),
+      dataCad: DateTime.now().add(const Duration(minutes: -10)),
+      imageUrl: "fish_second.png",
     ),
-    AudioModel(
-      author: "Asake",
-      title: "Yoga",
-      audioUrl: "yoga.mp3",
-      imageUrl: "yoga.jpeg",
+    FoodModel(
+      color: const Color(0xff98CA91),
+      title: "Steak Egg",
+      subTitle: "Salad and Lemon",
+      price: "10",
+      isFavorite: false,
+      user: UserModel(imageUrl: "pedro.png", name: "Pedro Costa"),
+      dataCad: DateTime.now().add(const Duration(minutes: -5)),
+      imageUrl: "meal.png",
     ),
-    AudioModel(
-      author: "Asake",
-      title: "Yoga",
-      audioUrl: "yoga.mp3",
-      imageUrl: "yoga.jpeg",
+    FoodModel(
+      color: const Color(0xff904D24),
+      title: "Beef",
+      subTitle: "Salad",
+      price: "15",
+      isFavorite: false,
+      user: UserModel(imageUrl: "manuel.png", name: "Manuel Junior"),
+      dataCad: DateTime.now().add(const Duration(minutes: -1)),
+      imageUrl: "steak.png",
     ),
-    AudioModel(
-      author: "Asake",
-      title: "Yoga",
-      audioUrl: "yoga.mp3",
-      imageUrl: "yoga.jpeg",
+    FoodModel(
+      color: const Color(0xffFFC82C),
+      title: "Grilled Fish",
+      subTitle: "Salad",
+      price: "7",
+      isFavorite: false,
+      user: UserModel(imageUrl: "paula.png", name: "Paula João"),
+      dataCad: DateTime.now().add(const Duration(minutes: -8)),
+      imageUrl: "fish.png",
+    )
+  ];
+
+  List<SaucesModel> sacues = [
+    SaucesModel(
+      name: "Mayonnaise",
+      price: 2.0,
+      imageUrl: "mayonnaise.png",
     ),
-    AudioModel(
-      author: "Asake",
-      title: "Yoga",
-      audioUrl: "yoga.mp3",
-      imageUrl: "yoga.jpeg",
+    SaucesModel(
+      name: "Ketchup",
+      price: 1.0,
+      imageUrl: "ketchup.png",
     ),
-    AudioModel(
-      author: "Asake",
-      title: "Yoga",
-      audioUrl: "yoga.mp3",
-      imageUrl: "yoga.jpeg",
+    SaucesModel(
+      name: "Spicy",
+      price: 1.0,
+      imageUrl: "spicy.png",
     ),
   ];
+
+  List<DrinkModel> drinks = [
+    DrinkModel(
+      price: 3.0,
+      name: "Cola",
+      imageUrl: "cola.png",
+    ),
+    DrinkModel(
+      price: 3.5,
+      name: "Pepsi",
+      imageUrl: "pepsi.png",
+    ),
+    DrinkModel(
+      price: 4.0,
+      name: "Beer",
+      imageUrl: "beer.png",
+    )
+  ];
+  //* End food delivery
 }

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
-class TextBase extends StatelessWidget {
+class AnimatedTextBase extends StatelessWidget {
   final String? text;
   final Color? cor;
   final bool center;
@@ -10,8 +10,10 @@ class TextBase extends StatelessWidget {
   final double? size;
   final bool justify;
   final double? letterSpacer;
-  const TextBase(
+  final Duration? duration;
+  const AnimatedTextBase(
       {Key? key,
+      required this.duration,
       this.letterSpacer,
       this.justify = false,
       this.center = false,
@@ -23,18 +25,22 @@ class TextBase extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(
-      text ?? "",
-      textAlign: center
-          ? TextAlign.center
-          : justify
-              ? TextAlign.justify
-              : TextAlign.start,
+    return AnimatedDefaultTextStyle(
+      duration: duration!,
       style: TextStyle(
-          letterSpacing: letterSpacer,
-          fontSize: size ?? 20.0,
-          color: cor ?? Colors.black,
-          fontWeight: font ?? FontWeight.normal),
+        letterSpacing: letterSpacer,
+        fontSize: size ?? 20.0,
+        color: cor ?? Colors.black,
+        fontWeight: font ?? FontWeight.normal,
+      ),
+      child: Text(
+        text ?? "",
+        textAlign: center
+            ? TextAlign.center
+            : justify
+                ? TextAlign.justify
+                : TextAlign.start,
+      ),
     );
   }
 }
