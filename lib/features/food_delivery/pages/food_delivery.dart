@@ -1,21 +1,16 @@
-import 'dart:developer';
 import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter_challenge/core/navidator/navigator_animation.dart';
-import 'package:flutter_challenge/core/presentation/animated_text_base.dart';
-import 'package:flutter_challenge/core/presentation/icon_buttom.dart';
-import 'package:flutter_challenge/core/presentation/text_base.dart';
-import 'package:flutter_challenge/features/food_delivery/model/food_model.dart';
-import 'package:flutter_challenge/features/food_delivery/pages/detail_food.dart';
-import 'package:flutter_challenge/features/food_delivery/widgets/circle.dart';
-import 'package:flutter_challenge/features/food_delivery/widgets/custom_app_bar_food_delivery.dart';
 
 import '../../../core/injections/get_it.dart';
+import '../../../core/navidator/navigator_animation.dart';
+import '../../../core/presentation/animated_text_base.dart';
+import '../../../core/presentation/icon_buttom.dart';
+import '../../../core/presentation/text_base.dart';
 import '../../../core/services/services.dart';
-import '../../sond_player/model/audio_model.dart';
+import '../model/food_model.dart';
+import '../widgets/custom_app_bar_food_delivery.dart';
+import 'detail_food.dart';
 
 class FoodDelivery extends StatefulWidget {
   const FoodDelivery({Key? key}) : super(key: key);
@@ -129,12 +124,14 @@ class _FoodDeliveryState extends State<FoodDelivery>
     if (bottom >= 200.0) isCurrent = false;
     // double opacity = isCurrent ? 1.0 : 0.0;
     return GestureDetector(
-      onTap: () {
-        NavigatorAnimation.normal(
-          context,
-          DetailFood(food: item),
-        );
-      },
+      onTap: index == currentIndex
+          ? () {
+              NavigatorAnimation.normal(
+                context,
+                DetailFood(food: item),
+              );
+            }
+          : null,
       child: AnimatedContainer(
         margin: EdgeInsets.only(bottom: bottom / scale),
         duration: const Duration(milliseconds: 500),
@@ -165,7 +162,8 @@ class _FoodDeliveryState extends State<FoodDelivery>
                 right: 12,
                 child: _columnDetail(item, isCurrent),
               ),
-              Positioned(left: 12, bottom: 12, child: _priceItem(item.price)),
+              Positioned(
+                  left: 12, bottom: 12, child: _priceItem("${item.price}")),
               Positioned(
                   bottom: 40,
                   left: 32,

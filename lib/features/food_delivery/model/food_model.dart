@@ -6,7 +6,7 @@ class FoodModel {
   final String imageUrl;
   final UserModel user;
   final DateTime dataCad;
-  final String price;
+  final double price;
   final Color color;
   final bool isFavorite;
 
