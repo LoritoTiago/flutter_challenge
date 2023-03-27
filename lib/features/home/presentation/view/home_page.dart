@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_challenge/features/awesome_app_bar/presentation/pages/awesome_app_bar.dart';
 import 'package:flutter_challenge/features/food_delivery/pages/food_delivery.dart';
 import 'package:flutter_challenge/features/list_books/pages/list_books.dart';
 
@@ -64,6 +65,18 @@ class HomePage extends StatelessWidget {
             NavigatorCupertino.navigatorNormal(
               context,
               const FoodDelivery(),
+            );
+          },
+        ),
+      ),
+      Item(
+        item: HomeItemModel(
+          title: "Awesome app bar",
+          icon: const Icon(Icons.apps_outlined),
+          function: () {
+            NavigatorCupertino.navigatorNormal(
+              context,
+              const AwesomeAppBar(),
             );
           },
         ),
